@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container{
+    display: grid;
+    margin: 50px;
+    grid-gap: 30px;
+    background-color: grey;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "first first first first first"
+    "second second second second second";
+}
+
+.first{
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    grid-area: first;
+}
+
+.second{
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    grid-area: second;
+}
+
+.card-first{
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+    width: 250px;
+    background-color: brown;
+}
+
+.card-second{
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+    width: 250px;
+    background-color: brown;
+}
