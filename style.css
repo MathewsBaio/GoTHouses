@@ -6,9 +6,11 @@
 
 .container{
     display: grid;
-    margin: 50px;
+    margin: 40px;
+    padding: 30px;
     grid-gap: 30px;
-    background-color: grey;
+    background-color: rgba(128,128,128,.10) ;
+    border: 2px solid grey;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
