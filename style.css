@@ -4,6 +4,10 @@
     
 }
 
+body {
+    background-image: none;
+}
+
 .container{
     display: grid;
     margin: 40px;
