@@ -1,53 +1,51 @@
 *{
     margin: 0;
     padding: 0;
+    height: 100vh;
     
 }
 
 body {
-    background-image: none;
+    --primary-color: #3B3B40;
+    --secondary-color: #808ba3;
+    --sup-color: #656A73;
+    --white-color: #D2D4D9;
+    --black-color: #0B0C0D;
+    /*
+    A paleta de cores escolhida é analoga, concentrando-se em tons de cinza e azul, vizando uma identidade que remeta ao inverno e ao norte de Westeros, tema da página. 
+    */
+
+    background-image: url(/img/background.jpg);
+    background-position: center;
+}
+
+.content{
+    display: grid;
+    
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas: 
+    "header"
+    "container"
+    "footer";
+}
+
+header{
+    height: 50px;
+    margin-bottom: 30px;
+    background-color: var(--primary-color);
+    grid-area: header;
 }
 
 .container{
-    display: grid;
-    margin: 40px;
-    padding: 30px;
-    grid-gap: 30px;
-    background-color: rgba(128,128,128,0.7) ;
+    margin: 30px 30px;
+    grid-area: container;
+    background-color: rgba(101,106,115,0.7) ;
     border: 2px solid grey;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-    "first first first first first"
-    "second second second second second";
 }
 
-.first{
-    display: flex;
-    gap: 30px;
-    justify-content: space-around;
-    grid-area: first;
-}
-
-.second{
-    display: flex;
-    gap: 30px;
-    justify-content: space-around;
-    grid-area: second;
-}
-
-.card-first{
-    display: flex;
-    justify-content: space-around;
-    height: 300px;
-    width: 250px;
-    background-color: brown;
-}
-
-.card-second{
-    display: flex;
-    justify-content: space-around;
-    height: 300px;
-    width: 250px;
-    background-color: brown;
+footer{
+    height: 50px;
+    margin-top: 50px;
+    grid-area: footer;
+    text-align: center;
 }
