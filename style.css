@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    color: var(--white-color);
+    color: var(--black-color);
     
 }
 
@@ -37,6 +37,7 @@ header {
     height: 100px;
     width: auto;
     padding: 14px 24px;
+    color: var(--white-color);
 
 }
 
@@ -57,10 +58,53 @@ ul > li {
 .middle {
     grid-area: middles;
     padding: 0 24px;
-    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "first"
+    "second"
+    "third"
+    "four"
+    "five";
 }
 
 footer {
     grid-area: footer;
     height: 50px;
 }
+
+.first-row {
+    grid-area: first;
+    display: flex;
+}
+
+.second-row {
+    grid-area: second;
+    display: flex;
+}
+
+.third-row {
+    grid-area: third;
+    display: flex;
+}
+
+.four-row {
+    grid-area: four;
+    display: flex;
+}
+
+.five-row {
+    grid-area: five;
+    display: flex;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-color);
+    width: 300px;
+    height: 400px;
+    
+}
+
