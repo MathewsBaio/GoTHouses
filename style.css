@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+@font-face {
+    font-family: 'Aurebesh';
+    src: url(./fonts/Aurebesh.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,27 +15,30 @@
 }
 
 body {
-    --primary-color: #0047E6;
-    --secondary-color: #4CDDE6;
-    --sup-color: #00E6A6;
-    --contrast-color: #00E657;
+    --primary-color: #0554F2;
+    --secondary-color: #076DF2;
+    --sup-color: #536878;
+    --contrast-color: #817906;
     --white-color: #D2D4D9;
     --black-color: #0B0C0D;
     /*
-    A paleta de cores escolhida é analoga, concentrando-se em tons de cinza e azul, vizando uma identidade que remeta ao inverno e ao norte de Westeros, tema da página. 
+    A paleta de cores escolhida é majoritariamente monocromática, variando em tons de azul. A cor amarela é utilizada pontualmente para destacar pontos necessários usando contraste. O azul foi escolhido como principal cor devido às suas características associadas aos conceitos de paz, harmonia, segurança e espiritualidade, diretamente associados ao que a Ordem Jedi, do universo de Star Wars, representa. Ademais, culturalmente normalmente consideramos a cor azul como a representação do lado "bom" e vermelho para o "mau", no universo de Star Wars que inclui essa visão dicotômica, o azul é muito associado aos Jedi e o vermelho aos seus opositores, os sith, por este mesmo motivo.
     */
     --image-size: 150px;
     --box-width: 220px;
     --box-height: 280px;
 
-    background-image: url(/img/background2.jpg);
-    /* background-position: center; */
+    background-image: radial-gradient(circle, #f2f2f2, #eaeaec, #e2e3e5, #dadbdf, #d2d4d9);
+    
 }
+
+
 
 .content {
     display: grid;
     grid-template-rows: 100px 1fr 50px;
     grid-template-columns: 1fr;
+    row-gap: 56px;
     grid-template-areas: 
     "header"
     "middles"
@@ -38,11 +50,23 @@ header {
     justify-content: space-between;
     gap: 100px;
     grid-area: header;
-    height: 100px;
+    height: 50px;
     width: auto;
     padding: 14px 24px;
-    color: var(--white-color);
+    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
 
+}
+
+header > .logo {
+    display: inline-flex;
+    font-size: 1.8rem;
+    font-family: 'Aurebesh';
+   
+}
+
+header > .logo > #down {
+    margin-top: 30px;
 }
 
 
@@ -50,18 +74,26 @@ header {
 ul {
     display: flex;
     justify-content: space-between;
-    gap: 200px;
+    gap: 100px;
     list-style-type: none;
+    margin-top: 5px;
 }
 
-ul > li {
-    font-size: 2rem;
-    
+header > ul > li {
+    font-size: 1.5rem;
+    padding: 5px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+#selected-page {
+    background-color: var(--sup-color);
 }
 
 .middle {
     grid-area: middles;
-    padding: 0 24px;
+    padding: 24px 24px;
+    margin: 0 24px;
     display: grid;
     row-gap: 48px;
     grid-template-columns: 1fr;
@@ -72,11 +104,15 @@ ul > li {
     "third"
     "four"
     "five";
+    border: var(--black-color) solid 2px;
 }
 
 footer {
     grid-area: footer;
     height: 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
 }
 
 .first-row {
@@ -87,11 +123,17 @@ footer {
 
 }
 
-.first-row > p {
+.first-row > .para {
     height: 240px;
     width: 500px;
     padding: 24px;
     background-color: rgba(210,212,217,0.8);
+    font-family: 'Roboto Serif', serif;
+    font-size: 1rem;
+}
+
+.first-row > .para > blockquote {
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -120,10 +162,22 @@ footer {
 }
 
 .four-row > p {
+    display: flex;
     height: 240px;
     width: 500px;
-    padding: 24px;
+    padding: 48px;
     background-color: rgba(210,212,217,0.8);
+    font-family: 'Roboto Serif';
+    font-size: 0.9rem;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+}
+
+#jedi-code {
+    font-family: 'Aurebesh';
+    font-size: 1rem;
+    color: var(--contrast-color);
 }
 
 .five-row {
@@ -168,7 +222,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--white-color);
+    background-color: var(--sup-color);
     width: var(--box-width);
 }
 
@@ -178,6 +232,11 @@ footer {
     color: var(--white-color);
     background-color: var(--primary-color);
     width: var(--box-width);
+    font-family: 'Roboto', sans-serif;
+}
+
+#grand-master {
+    background-color: var(--contrast-color);
 }
 
 .card-content {
@@ -187,6 +246,12 @@ footer {
     width: var(--box-width);
     padding: 14px 0;
     background-color: var(--white-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.color-text {
+    display: inline;
+    color: var(--secondary-color);
 }
 
 

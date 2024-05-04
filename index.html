@@ -3,38 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jedi High Council</title>
+    <title>Conselho Jedi</title>
 
-
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="content">
         <header>
-            <h1>Logo</h1>
+            <div class="logo">
+                <h1>Ordem</h1>
+                <h1 id="down">Jedi</h1>
+            </div>
+            
             <ul>
-                <li>Teste</li>
-                <li>Teste</li>
-                <li>Teste</li>
+                <li>Templos</li>
+                <li id="selected-page">Conselho</li>
+                <li>Membros</li>
             </ul>
         </header>
         <div class="middle">
             <div class="first-row">
-                
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate tenetur, at vel quae incidunt repellat ratione ea dolores quidem non laboriosam! Dignissimos aut tenetur recusandae minus numquam excepturi, distinctio a.</p>
-                
+                <div class="para">
+                    <blockquote cite="Grande Mestre Yoda">
+                        <p>"Tamanho não importa. Olhe para mim. Julga pelo tamanho a mim? Hmm? Não? E não deve mesmo. Aliada minha é a Força, e poderosa aliada ela é."</p>
+                    </blockquote><br>
+                    <p>Yoda foi um dos mais célebres e poderosos Mestres Jedi de todos os tempos, conhecido pela sua enorme sabedoria, conhecedor profundo da Força e habilidades em combates com sabre de luz, ele viveu por mais de 900 anos. Yoda foi um dos Grandes Mestres do Alto Conselho Jedi e seu Tempo durante os últimos séculos da República Galáctica e da Ordem Jedi lhe fizeram uma figura consequencial na história galáctica.</p>
+                </div>
                 <div class="card">
                     <div class="card-top">
                         <img src="./img/master yoda.jpg" alt="" width="90%">
                     </div>
-                    <div class="card-title">
-                        <h2>Grande Mestre Yoda</h2>
+                    <div class="card-title" id="grand-master">
+                        <h2 >Yoda</h2>
                     </div>
                     <div class="card-content">
                         <ul>
-                            <li>Raça: Desconhecida</li>
-                            <li>Planeta Natal: Desconhecido</li>
-                            <li>Nascimento: 896 BBY</li>
+                            <li><div class="color-text">Espécie:</div> Desconhecida</li>
+                            <li><div class="color-text">Planeta Natal</div>: Desconhecido</li>
+                            <li><div class="color-text">Nascimento</div>: 896 ABY</li>
                         </ul>
                     </div>
                 </div>
@@ -49,9 +56,9 @@
                     </div>
                     <div class="card-content">
                         <ul>
-                            <li>Raça: Desconhecida</li>
-                            <li>Planeta Natal: Desconhecido</li>
-                            <li>Nascimento: 896 BBY</li>
+                            <li><div class="color-text">Espécie:</div> Humano</li>
+                            <li><div class="color-text">Planeta Natal:</div> Stewjon</li>
+                            <li><div class="color-text">Nascimento:</div> 57 ABY</li>
                         </ul>
                     </div>
                 </div>
@@ -65,9 +72,9 @@
                     </div>
                     <div class="card-content">
                         <ul>
-                            <li>Raça: Desconhecida</li>
-                            <li>Planeta Natal: Desconhecido</li>
-                            <li>Nascimento: 896 BBY</li>
+                            <li><div class="color-text">Espécie:</div> Humano</li>
+                            <li><div class="color-text">Planeta Natal:</div> Haruun Kal</li>
+                            <li><div class="color-text">Nascimento:</div> 72 ABY</li>
                         </ul>
                     </div>
                 </div>
@@ -81,9 +88,9 @@
                     </div>
                     <div class="card-content">
                         <ul>
-                            <li>Raça: Desconhecida</li>
-                            <li>Planeta Natal: Desconhecido</li>
-                            <li>Nascimento: 896 BBY</li>
+                            <li><div class="color-text">Espécie:</div> Humano</li>
+                            <li><div class="color-text">Planeta Natal:</div> Tatooine</li>
+                            <li><div class="color-text">Nascimento:</div> 41 ABY</li>
                         </ul>
                     </div>
                 </div>
@@ -98,9 +105,9 @@
                     </div>
                     <div class="card-content">
                         <ul>
-                            <li>Raça: Desconhecida</li>
-                            <li>Planeta Natal: Desconhecido</li>
-                            <li>Nascimento: 896 BBY</li>
+                            <li><div class="color-text">Espécie:</div> Humana</li>
+                            <li><div class="color-text">Planeta Natal:</div> Chalacta</li>
+                            <li><div class="color-text">Nascimento:</div> Desconhecido</li>
                         </ul>
                     </div>
                 </div>
@@ -114,9 +121,9 @@
                     </div>
                     <div class="card-content">
                         <ul>
-                            <li>Raça: Desconhecida</li>
-                            <li>Planeta Natal: Desconhecido</li>
-                            <li>Nascimento: 896 BBY</li>
+                            <li><div class="color-text">Espécie:</div> Cereano</li>
+                            <li><div class="color-text">Planeta Natal:</div> Cerea</li>
+                            <li><div class="color-text">Nascimento:</div> 92 ABY</li>
                         </ul>
                     </div>
                 </div>
@@ -130,16 +137,20 @@
                     </div>
                     <div class="card-content">
                         <ul>
-                            <li>Raça: Desconhecida</li>
-                            <li>Planeta Natal: Desconhecido</li>
-                            <li>Nascimento: 896 BBY</li>
+                            <li><div class="color-text">Espécie:</div> Kel Dor</li>
+                            <li><div class="color-text">Planeta Natal:</div> Dorin</li>
+                            <li><div class="color-text">Nascimento:</div> Desconhecido</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="four-row">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate tenetur, at vel quae incidunt repellat ratione ea dolores quidem non laboriosam! Dignissimos aut tenetur recusandae minus numquam excepturi, distinctio a.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate tenetur, at vel quae incidunt repellat ratione ea dolores quidem non laboriosam! Dignissimos aut tenetur recusandae minus numquam excepturi, distinctio a.</p>
+                <p id="text">O Alto Conselho Jedi foi o principal Conselho da Ordem Jedi durante o governo da República Galáctica. O Alto Conselho se reunia na Torre sudeste do Templo Jedi em Coruscant. O Alto Conselho reunia um grupo de doze sábios e poderosos Mestres Jedi eleitos para orientar a Ordem Jedi, bem como para servir como um órgão consultivo para o Supremo Chanceler. O Conselho era composto por cinco membros permanentes, quatro membros de longo mandato e três membros de mandato limitado. Esta organização havia evoluído a partir das antigas assembleias de Mestres Jedi e, durante a Grande Guerra do Hiperespaço, pode ter se resumido a um "círculo interno" dentro da assembleia. O Conselho inicialmente não tinha um local de encontro determinado e as sessões ocorriam sem regularidade em planetas como Ossus, Alderaan e Chandrila. Com a transferência da Ordem de Ossus para Coruscant, o Conselho foi definitivamente estabelecido nesse planeta.</p>
+                <p id="jedi-code">NAO HA EMOCAO, HA PAZ<br><br>
+                    NAO HA IGNORANCIA, HA CONHECIMENTO<br><br>
+                    NAO HA PAIXAO, HA SERENIDADE<br><br>
+                    NAO HA CAOS, HA HARMONIA<br><br>
+                    NAO HA MORTE, HA A FORCA</p>
             </div>
             <div class="five-row">
                 <div class="card">
@@ -151,9 +162,9 @@
                     </div>
                     <div class="card-content">
                         <ul>
-                            <li>Raça: Desconhecida</li>
-                            <li>Planeta Natal: Desconhecido</li>
-                            <li>Nascimento: 896 BBY</li>
+                            <li><div class="color-text">Espécie:</div> Nautolano</li>
+                            <li><div class="color-text">Planeta Natal:</div> Glee Anselm</li>
+                            <li><div class="color-text">Nascimento:</div> Desconhecido</li>
                         </ul>
                     </div>
                 </div>
@@ -167,9 +178,9 @@
                     </div>
                     <div class="card-content">
                         <ul>
-                            <li>Raça: Desconhecida</li>
-                            <li>Planeta Natal: Desconhecido</li>
-                            <li>Nascimento: 896 BBY</li>
+                            <li><div class="color-text">Espécie:</div> Togruta</li>
+                            <li><div class="color-text">Planeta Natal:</div> Shili</li>
+                            <li><div class="color-text">Nascimento:</div> 59 ABY</li>
                         </ul>
                     </div>
                 </div>
@@ -183,15 +194,15 @@
                     </div>
                     <div class="card-content">
                         <ul>
-                            <li>Raça: Desconhecida</li>
-                            <li>Planeta Natal: Desconhecido</li>
-                            <li>Nascimento: 896 BBY</li>
+                            <li><div class="color-text">Espécie:</div> Tholothiana</li>
+                            <li><div class="color-text">Planeta Natal:</div> Tholoth</li>
+                            <li><div class="color-text">Nascimento:</div> Desconhecido</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <footer>Footer</footer>
+        <footer>Trabalho da Disciplina Design de Interfaces Digitais - Análise e Desenvolvimento de Sistemas FIVJ</footer>
     </div>
 </body>
 </html>
