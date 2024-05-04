@@ -1,19 +1,23 @@
 *{
     margin: 0;
     padding: 0;
-    color: var(--black-color);
+    
     
 }
 
 body {
-    --primary-color: #3B3B40;
-    --secondary-color: #808ba3;
-    --sup-color: #656A73;
+    --primary-color: #0047E6;
+    --secondary-color: #4CDDE6;
+    --sup-color: #00E6A6;
+    --contrast-color: #00E657;
     --white-color: #D2D4D9;
     --black-color: #0B0C0D;
     /*
     A paleta de cores escolhida é analoga, concentrando-se em tons de cinza e azul, vizando uma identidade que remeta ao inverno e ao norte de Westeros, tema da página. 
     */
+    --image-size: 150px;
+    --box-width: 220px;
+    --box-height: 280px;
 
     background-image: url(/img/background2.jpg);
     /* background-position: center; */
@@ -21,7 +25,7 @@ body {
 
 .content {
     display: grid;
-    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-rows: 100px 1fr 50px;
     grid-template-columns: 1fr;
     grid-template-areas: 
     "header"
@@ -59,6 +63,7 @@ ul > li {
     grid-area: middles;
     padding: 0 24px;
     display: grid;
+    row-gap: 48px;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: 
@@ -77,34 +82,111 @@ footer {
 .first-row {
     grid-area: first;
     display: flex;
+    justify-content: space-around;
+    gap: 10px;
+
 }
+
+.first-row > p {
+    height: 240px;
+    width: 500px;
+    padding: 24px;
+    background-color: rgba(210,212,217,0.8);
+}
+
+
+
+.first-row > ul > li {
+    font-size: 1rem;
+}
+
 
 .second-row {
     grid-area: second;
     display: flex;
+    justify-content: space-around;
 }
 
 .third-row {
     grid-area: third;
     display: flex;
+    justify-content: space-around;
 }
 
 .four-row {
     grid-area: four;
     display: flex;
+    justify-content: space-around;
+}
+
+.four-row > p {
+    height: 240px;
+    width: 500px;
+    padding: 24px;
+    background-color: rgba(210,212,217,0.8);
 }
 
 .five-row {
     grid-area: five;
     display: flex;
+    justify-content: space-around;
 }
+
 
 .card {
     display: flex;
     flex-direction: column;
-    background-color: var(--white-color);
-    width: 300px;
-    height: 400px;
+    align-items: center;
+    gap: 4px;
+    background-color: rgba(0, 0, 0, 0);
+    /* border: #808ba3 solid 8px; */
+    width: var(--box-width);
+    height: var(--box-height);
     
 }
+
+.card-content > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.card-content > ul > li {
+    font-size: 1rem;
+}
+
+.card-top > img {
+    width: var(--image-size);
+    height: var(--image-size);
+    object-fit: cover;
+}
+
+.card-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-color);
+    width: var(--box-width);
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    width: var(--box-width);
+}
+
+.card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--box-width);
+    padding: 14px 0;
+    background-color: var(--white-color);
+}
+
 
